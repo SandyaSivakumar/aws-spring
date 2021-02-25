@@ -59,4 +59,4 @@ jobs:
            --deployment-config-name CodeDeployDefault.OneAtATime \
            --deployment-group-name ${{ matrix.deploy-group }} \
            --file-exists-behavior OVERWRITE \
-           --github-location repository="SandyaSivakumar/aws-spring" commitId="c7e4bf2e271f6eea08e66ec9a3c3afb6cc0ec3ec"
+           --github-location repository=SandyaSivakumar/aws-spring commitId=c7e4bf2e271f6eea08e66ec9a3c3afb6cc0ec3ec
