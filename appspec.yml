@@ -14,9 +14,9 @@ permissions:
 hooks:
   ApplicationStop:
     - location: scripts/server_stop.sh
-      timeout: 20
+      timeout: 300
       runas: ubuntu
   ApplicationStart:
     - location: scripts/server_start.sh
-      timeout: 20
+      timeout: 300
       runas: ubuntu
