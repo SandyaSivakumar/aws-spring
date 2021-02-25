@@ -45,7 +45,7 @@ jobs:
 
       # Deploy push to AWS S3
       - name: AWS Get Commit Id
-        run: git rev-parse HEAD
+        run: export commitid=$(git rev-parse HEAD)
 
       # Echo Commit Id
       - name: Commit Id Check
