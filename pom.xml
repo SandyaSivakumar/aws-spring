@@ -36,7 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>springboot-first-app</finalName>
+		<finalName>springboot-cicd-app</finalName>
 	</build>
 
 </project>
