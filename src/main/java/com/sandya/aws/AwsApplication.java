@@ -11,7 +11,7 @@ public class AwsApplication {
 
 	@GetMapping("/")
 	public String init(){
-		return "You are seeing First Application";
+		return "You are seeing Application for first time";
 	}
 
 	public static void main(String[] args) {

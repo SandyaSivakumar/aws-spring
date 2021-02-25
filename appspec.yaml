@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/test-project
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
+hooks:
+  ApplicationStop:
+    - location: scripts/server_stop.sh
+      timeout: 20
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/server_start.sh
+      timeout: 20
+      runas: ubuntu
