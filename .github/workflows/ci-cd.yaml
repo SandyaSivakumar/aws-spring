@@ -45,7 +45,11 @@ jobs:
 
       # Deploy push to AWS S3
       - name: AWS Get Commit Id
-        run: export commitid=$(git rev-parse HEAD)
+        run: git rev-parse HEAD
+
+      # Echo Commit Id
+      - name: Commit Id Check
+        run: echo $commitid
 
       # Create deployment to CodeDeploy
       - name: AWS Create Deployment
