@@ -43,13 +43,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
-      # Deploy push to AWS S3
-      - name: AWS Get Commit Id
-        run: export commitid=$(/usr/bin/git rev-parse HEAD)
-
-      # Echo Commit Id
-      - name: Commit Id Check
-        run: echo $commitid
+#      # Deploy push to AWS S3
+#      - name: AWS Get Commit Id
+#        run: export commitid=$(git rev-parse HEAD)
+#
+#      # Echo Commit Id
+#      - name: Commit Id Check
+#        run: echo $commitid
 
       # Create deployment to CodeDeploy
       - name: AWS Create Deployment
@@ -59,4 +59,4 @@ jobs:
            --deployment-config-name CodeDeployDefault.OneAtATime \
            --deployment-group-name ${{ matrix.deploy-group }} \
            --file-exists-behavior OVERWRITE \
-           --gitHubLocation repository="SandyaSivakumar/aws-spring" commitId=$commitid
+           --gitHubLocation repository="SandyaSivakumar/aws-spring" commitId="c7e4bf2e271f6eea08e66ec9a3c3afb6cc0ec3ec"
