@@ -44,8 +44,8 @@ jobs:
           aws-region: us-east-2
 
       # Deploy push to AWS S3
-            - name: AWS Get Commit Id
-              run: export commitid=$(git rev-parse HEAD)
+      - name: AWS Get Commit Id
+        run: export commitid=$(git rev-parse HEAD)
 
       # Create deployment to CodeDeploy
       - name: AWS Create Deployment
